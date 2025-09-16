@@ -3,293 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The World of Pet Dogs</title>
+    <title>Creator's Picks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Google Fonts --- */
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
-
-        /* --- Global Styles --- */
+        /* Use custom font */
         body {
-            font-family: 'Noto Sans', sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Inter', sans-serif;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #2c5d63;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 2.8em;
+        /* Elegant placeholder for broken images */
+        .product-image-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f4f6;
+            color: #9ca3af;
+            font-size: 0.875rem;
             text-align: center;
-            margin-bottom: 0.5em;
-        }
-
-        h2 {
-            font-size: 2em;
-            border-bottom: 3px solid #78c0a8;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-
-        h3 {
-            font-size: 1.4em;
-        }
-
-        a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Header --- */
-        .header {
-            background: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            color: white;
-            font-size: 3.5em;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        .header p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        /* --- Content Sections --- */
-        section {
-            background-color: #ffffff;
-            margin-top: 30px;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-
-        /* --- Breed Table --- */
-        .breed-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .breed-table th, .breed-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .breed-table th {
-            background-color: #f2f2f2;
-            color: #2c5d63;
-        }
-        
-        .breed-table img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            background-color: #e0e0e0;
-        }
-
-        /* --- Checklist / Benefits List --- */
-        ul.checklist, ul.benefits-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul.checklist li, ul.benefits-list li {
-            padding-left: 30px;
-            position: relative;
-            margin-bottom: 10px;
-        }
-
-        ul.checklist li::before {
-            content: '✓';
-            color: #78c0a8;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        
-        ul.benefits-list li::before {
-            content: '🐾';
-            color: #78c0a8;
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
-        
-
-        /* --- Footer --- */
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
-            background-color: #2c5d63;
-            color: #f0f0f0;
-        }
-        
-        .footer p {
-            margin: 0;
-            font-size: 1.1em;
-            font-weight: 300;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            h1, .header h1 {
-                font-size: 2.5em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .header {
-                padding: 60px 15px;
-            }
-            .breed-table th, .breed-table td {
-                padding: 10px;
-            }
-            .breed-table img {
-                width: 60px;
-                height: 60px;
-            }
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
-    <header class="header">
-        <h1>Welcome to the World of Pet Dogs</h1>
-        <p>They are humanity's most loyal friends, brightening our lives with unconditional love and companionship.</p>
-    </header>
-
-    <main class="container">
-
-        <section id="history">
-            <h2>The Origin and History of Dogs: From Wolf to Companion</h2>
-            <p>Did you know? The adorable dog snuggling beside you today descended from wild wolves tens of thousands of years ago. Scientists widely believe that dogs were the first animals to be domesticated by humans. Through thousands of years of living and evolving together, dogs have gradually transformed from hunting partners and guard dogs into indispensable members of our families. Their deep history with humans has forged the unique, cross-species friendship we see today.</p>
-        </section>
-
-        <section id="breeds">
-            <h2>Popular Dog Breeds: There's One for Everyone</h2>
-            <p>There is a vast variety of dog breeds in the world, each with its own unique personality and characteristics. Understanding the habits of different breeds can help you find the dog that best suits your lifestyle.</p>
-            <table class="breed-table">
-                <thead>
-                    <tr>
-                        <th>Breed</th>
-                        <th>Image</th>
-                        <th>Temperament</th>
-                        <th>Size</th>
-                        <th>Exercise Needs</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Labrador Retriever</strong></td>
-                        <td><img src="https://via.placeholder.com/100" alt="Labrador"></td>
-                        <td>Friendly, gentle, intelligent, energetic</td>
-                        <td>Medium to Large</td>
-                        <td>High</td>
-                    </tr>
-                    <tr>
-                        <td><strong>French Bulldog</strong></td>
-                        <td><img src="https://via.placeholder.com/100" alt="French Bulldog"></td>
-                        <td>Lively, playful, affectionate, a bit stubborn</td>
-                        <td>Small</td>
-                        <td>Low</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Golden Retriever</strong></td>
-                        <td><img src="https://via.placeholder.com/100" alt="Golden Retriever"></td>
-                        <td>Gentle, patient, loyal, easy to train</td>
-                        <td>Large</td>
-                        <td>High</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Poodle</strong></td>
-                        <td><img src="https://via.placeholder.com/100" alt="Poodle"></td>
-                        <td>Extremely intelligent, elegant, hypoallergenic</td>
-                        <td>Varies</td>
-                        <td>Medium</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Corgi</strong></td>
-                        <td><img src="https://via.placeholder.com/100" alt="Corgi"></td>
-                        <td>Intelligent, outgoing, alert, full of energy</td>
-                        <td>Small</td>
-                        <td>Medium</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><small>Note: The images are placeholders. You can replace them with links to real dog photos.</small></p>
-        </section>
-
-        <section id="preparation">
-            <h2>Preparing for a Dog: A Checklist for Your New Family Member</h2>
-            <p>Bringing a dog home is a major decision. Being well-prepared can make the transition period smoother for both you and your new dog.</p>
-            <ul class="checklist">
-                <li><strong>Choose the right dog:</strong> Consider your living space, lifestyle, family members, and the time and money you can commit. Adopting instead of buying is also a loving choice.</li>
-                <li><strong>Prepare basic supplies:</strong> Dog food, water bowls, a leash, a comfortable bed, and durable toys.</li>
-                <li><strong>Home safety check:</strong> Secure any plants, chemicals, and electrical cords that are toxic to dogs to ensure your home is a safe environment for them.</li>
-            </ul>
-        </section>
-
-        <section id="care">
-            <h2>Daily Care and Health: Keeping Your Dog in Top Shape</h2>
-            <h3>Balanced Diet</h3>
-            <p>Provide a nutritionally balanced diet and avoid feeding human foods, especially those toxic to dogs like chocolate, onions, and grapes. Ensure fresh drinking water is always available.</p>
-            <h3>Regular Exercise</h3>
-            <p>Walk and play with your dog daily. This not only meets their exercise needs but also strengthens your bond. The amount of exercise required varies by breed.</p>
-            <h3>Preventive Healthcare</h3>
-            <p>Follow your veterinarian's advice for vaccinations, regular deworming (internal and external), and annual check-ups. This is key to preventing diseases.</p>
-        </section>
+    <div class="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
         
-        <section id="training">
-            <h2>Training and Socialization: Raising a Well-Behaved Dog</h2>
-            <p>Good training and socialization help dogs integrate better into human society and can make your life as a dog owner much easier and more enjoyable.</p>
-            <ul class="checklist">
-                <li><strong>Early socialization:</strong> During puppyhood, expose your dog to various people, sounds, environments, and other friendly dogs.</li>
-                <li><strong>Basic obedience training:</strong> Teach your dog basic commands such as 'Sit,' 'Stay,' and 'Come.'</li>
-                <li><strong>Positive reinforcement:</strong> Use rewards (like treats, praise, or petting) to encourage good behavior.</li>
-            </ul>
-        </section>
+        <header class="text-center mb-10">
+            <img class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg" 
+                 src="data:image/png;base64,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" 
+                 alt="Profile Picture">
+            <h1 class="text-3xl font-bold text-gray-800">Creator's Picks</h1>
+            <p class="text-md text-gray-500 mt-2">Here are my carefully selected TikTok finds. Click the images or buttons to shop!</p>
+        </header>
 
-        <section id="benefits">
-            <h2>The Benefits of Owning a Dog: More Than Just Companionship</h2>
-            <p>The benefits of owning a dog go far beyond what we might imagine.</p>
-            <ul class="benefits-list">
-                <li><strong>Mental comfort:</strong> Dogs offer unconditional love and companionship, which can effectively relieve stress, anxiety, and loneliness.</li>
-                <li><strong>A healthier lifestyle:</strong> Daily dog walks encourage you to be more physically active, which is beneficial for cardiovascular health.</li>
-                <li><strong>Enhanced social life:</strong> When walking your dog or taking them to the park, you'll find it easier to connect with other dog owners.</li>
-                <li><strong>Fosters responsibility:</strong> Caring for a living being can teach children (and adults) about responsibility, empathy, and patience.</li>
-            </ul>
-        </section>
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            
+            <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <a href="https://vm.tiktok.com/ZNdmFg2b9/" target="_blank" rel="noopener noreferrer">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                             src="https://p16-oec-eu-common-no.tiktokcdn-eu.com/tos-no1a-i-t5fjg24jzw-no/2869794f9eac408086adf1aaaf335ba5~tplv-t5fjg24jzw-resize-webp:800:800.webp?dr=11205&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=no1a&from=1826719393" 
+                             alt="Pre-owned Apple iPhone 12"
+                             onerror="this.onerror=null; this.parentElement.classList.add('product-image-fallback'); this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=Image+Failed+to+Load';">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-md font-semibold text-gray-800 truncate">Pre-owned Apple iPhone 12 - 128GB White - Fair Condition - Unlocked</h3>
+                        <p class="text-sm text-gray-500 mt-1">£189 - Free shipping</p>
+                        <div class="mt-4">
+                            <span class="w-full inline-block text-center bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded-md group-hover:bg-blue-600 transition-colors duration-300">
+                                Shop Now
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <a href="https://vm.tiktok.com/ZNdmYnCJm/" target="_blank" rel="noopener noreferrer">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                             src="https://p16-oec-eu-common-useast2a.ibyteimg.com/tos-useast2a-i-tulkllf4y5-euttp/a80e9d19aed746a99fdb444cd797799b~tplv-tulkllf4y5-resize-webp:800:800.webp?dr=11262&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=no1a&from=1826719393" 
+                             alt="Black shadow edition hooded unisex tracksuit"
+                             onerror="this.onerror=null; this.parentElement.classList.add('product-image-fallback'); this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=Image+Failed+to+Load';">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-md font-semibold text-gray-800 truncate">Black Shadow Edition Hooded Unisex Tracksuit</h3>
+                        <p class="text-sm text-gray-500 mt-1">£8.99 + shipping</p>
+                        <div class="mt-4">
+                            <span class="w-full inline-block text-center bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded-md group-hover:bg-blue-600 transition-colors duration-300">
+                                Shop Now
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <a href="https://vm.tiktok.com/ZNdmYgk7c/" target="_blank" rel="noopener noreferrer">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                             src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/9e2a00eac5c34a938e7a858fbdbb681a~tplv-o3syd03w52-resize-webp:800:800.webp?dr=11205&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=no1a&from=1826719393" 
+                             alt="Men's Fashionable Gradient Color Lace Up Sneakers"
+                             onerror="this.onerror=null; this.parentElement.classList.add('product-image-fallback'); this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=Image+Failed+to+Load';">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-md font-semibold text-gray-800 truncate">Men's Fashionable Gradient Color Lace Up Sneakers</h3>
+                        <p class="text-sm text-gray-500 mt-1">Shipping up to £3.98</p>
+                        <div class="mt-4">
+                            <span class="w-full inline-block text-center bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded-md group-hover:bg-blue-600 transition-colors duration-300">
+                                Shop Now
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="noopener noreferrer">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                             src="https://placehold.co/400x400/BAE6FD/1A202C?text=Product+Image" 
+                             alt="Product 4 Description"
+                             onerror="this.onerror=null; this.parentElement.classList.add('product-image-fallback'); this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=Image+Failed+to+Load';">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-md font-semibold text-gray-800 truncate">Replace with Product Title</h3>
+                        <p class="text-sm text-gray-500 mt-1">Replace with a short description</p>
+                        <div class="mt-4">
+                            <span class="w-full inline-block text-center bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded-md group-hover:bg-blue-600 transition-colors duration-300">
+                                Shop Now
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-    </main>
+            <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="noopener noreferrer">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                             src="https://placehold.co/400x400/FBCFE8/1A202C?text=Product+Image" 
+                             alt="Product 5 Description"
+                             onerror="this.onerror=null; this.parentElement.classList.add('product-image-fallback'); this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=Image+Failed+to+Load';">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-md font-semibold text-gray-800 truncate">Replace with Product Title</h3>
+                        <p class="text-sm text-gray-500 mt-1">Replace with a short description</p>
+                        <div class="mt-4">
+                            <span class="w-full inline-block text-center bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded-md group-hover:bg-blue-600 transition-colors duration-300">
+                                Shop Now
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-    <footer class="footer">
-        <p>Start a wonderful life with your dog, filled with love and responsibility.</p>
-    </footer>
+            <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="noopener noreferrer">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                             src="https://placehold.co/400x400/DDD6FE/1A202C?text=Product+Image" 
+                             alt="Product 6 Description"
+                             onerror="this.onerror=null; this.parentElement.classList.add('product-image-fallback'); this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=Image+Failed+to+Load';">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-md font-semibold text-gray-800 truncate">Replace with Product Title</h3>
+                        <p class="text-sm text-gray-500 mt-1">Replace with a short description</p>
+                        <div class="mt-4">
+                            <span class="w-full inline-block text-center bg-blue-500 text-white text-sm font-bold py-2 px-4 rounded-md group-hover:bg-blue-600 transition-colors duration-300">
+                                Shop Now
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <footer class="text-center mt-12">
+            <p class="text-sm text-gray-400">&copy; 2025 Creator's Picks</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
